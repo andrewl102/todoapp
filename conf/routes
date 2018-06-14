@@ -1,0 +1,10 @@
+GET     /items                       controllers.ToDoItemController.list
+POST    /item                        controllers.ToDoItemController.insert
+GET     /item/:id                    controllers.ToDoItemController.find(id:Long)
+PUT     /item/:id                    controllers.ToDoItemController.update(id:Long)
+DELETE  /item/:id                    controllers.ToDoItemController.delete(id:Long)
+
+# Not strictly needed as update can handle all functionality required, but added for completeness
+PUT     /item/:id/complete           controllers.ToDoItemController.complete(id:Long)
+PUT     /item/:id/uncomplete         controllers.ToDoItemController.uncomplete(id:Long)
+POST    /item/:id/addComment         controllers.ToDoItemController.addComment(id:Long)
